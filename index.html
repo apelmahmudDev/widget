@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techvill-talk</title>
+	<link rel="stylesheet" href="./styles.css">
 </head>
 <!-- style of iframe -->
 <!-- style="padding: 0px; position: fixed; z-index: 2147483646; border-radius: 16px; top: auto; background: none; width: 399px; bottom: 84px; max-height: calc(100% - 84px); right: 16px; height: 732px; min-height: 300px;" -->
 <body>
-	<!--CDN https://techvill-chatwedget.netlify.app/sdk.js -->
+	 <div class="container">
+		<h1>Chat Widget</h1>
+		<p class="instruction">Click on the chat icon to open the chat widget</p>
+		<h3>Install Widget</h3>
+		<p>To install techvill-widget, you can place this code before the &lt;body/&gt tag on every page of your website.</p>
+		<div class="code-area">
+			<code>
+				&lt;script
+					<br/>
+					<span class="code">src="https://techvill-chatwidget.netlify.app/sdk.js"</span><br/>
+					<span class="code">data-iframe-src="https://techvill-chat.netlify.app/"</span><br/> 
+					<span class="code">data-fab-icon="./assets/chat-outline.png"</span><br/> 
+					<span class="code">data-fab-close-icon="./assets/close.png"</span><br/> 
+					<span class="code">data-fab-bg-color="#2C2C2C"</span><br/> 
+					<span class="code">data-iframe-height="632"</span><br/> 
+					<span class="code">data-iframe-width="390"</span><br/> 
+				&gt;<br/>&lt;/script&gt;
+			</code>
+		</div>
+	 </div>
     <script 
         src="./sdk.js"
         data-iframe-src="https://techvill-chat.netlify.app/"
@@ -18,5 +38,6 @@
         data-iframe-height="632"
         data-iframe-width="390"
     ></script>
+</script>
 </body>
 </html>

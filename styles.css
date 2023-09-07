@@ -1,64 +1,32 @@
 /* styles.css */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: #ffdab9;
+	color: #333333;
 }
 
-.fab-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+.container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-.fab-button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+.instruction {
+	font-size: 1.5rem;
+	font-weight: 500;
 }
 
-.fab-icon {
-    font-size: 30px;
-    line-height: 60px;
-    display: block;
-    text-align: center;
+.code {
+	padding-left: 15px;
 }
 
-.chat-modal {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.chat-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.close-button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.chat-body {
-    padding: 10px;
-    max-height: 300px;
-    overflow-y: auto;
+.code-area {
+	margin-top: 20px;
+	border-radius: 10px;
+	padding: 15px;
+	border: 1px solid #2c2c2c;
 }
