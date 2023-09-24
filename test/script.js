@@ -149,6 +149,7 @@
 	document.head.appendChild(style);
 
 	// Variables declaration
+	const widgetFABContainer = document.querySelector(".techvill__widget-FAB__container");
 	const chatWidgetContainer = document.getElementById("techvill__widget-container");
 	const widgetOpenFAB = document.querySelector(".techvill__widget-FAB");
 	const widgetCloseFAB = document.querySelector(".techvill__widget-FAB__close");
@@ -156,6 +157,7 @@
 	const fullScreenBtn = document.getElementById("techvill__widget-full__screen-btn");
 
 	let offsetX, offsetY, isDragging = false;
+	let fabOffsetX, fabOffsetY, isFabDragging = false;
 
 	// Add JavaScript interactivity
 	const fabImg = document.createElement("img");
@@ -213,9 +215,24 @@
 		e.preventDefault();
 	});
 
+	// fab drag functionality ...
+	widgetFABContainer.addEventListener("mousedown", (e) => {
+		isFabDragging = true;
+		fabOffsetX = e.clientX - widgetFABContainer.getBoundingClientRect().left;
+		fabOffsetY = e.clientY - widgetFABContainer.getBoundingClientRect().top;
+
+		// Prevent default dragging of selected content
+		e.preventDefault();
+	});
+
 	// Event listener for mouse up
 	document.addEventListener("mouseup", () => {
 		isDragging = false;
+	});
+
+	// fab drag functionality ...
+	document.addEventListener("mouseup", () => {
+		isFabDragging = false;
 	});
 
 	// Disable drag when mouse leaves the header
@@ -238,6 +255,22 @@
 		}
 	});
 	// END: Dragging functionality
+
+	// START: fab drag functionality ...
+	document.addEventListener("mousemove", (e) => {
+		if (isFabDragging) {
+			const x = e.clientX - fabOffsetX;
+			const y = e.clientY - fabOffsetY;
+
+			// Ensure the chatWidgetContainer stays within the viewport
+			const maxX = window.innerWidth - widgetFABContainer.offsetWidth;
+			const maxY = window.innerHeight - widgetFABContainer.offsetHeight;
+
+			widgetFABContainer.style.left = `${Math.min(maxX, Math.max(0, x))}px`;
+			widgetFABContainer.style.top = `${Math.min(maxY, Math.max(0, y))}px`;
+		}
+	}
+	);
 
 	// START: full screen toggle functionality
 	
