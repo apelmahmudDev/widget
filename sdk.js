@@ -34,8 +34,7 @@
                         title="Techvillage support chat"
                         frameborder="0" 
                         allowfullscreen="true" 
-                        allowtransparency="true" 
-                        allow="encrypted-media"
+                        allowtransparency="true"
                     ></iframe>`
 						: `<div class="techvill-widget-notfound-iframe">
                         <h1>Chat widget</h1>
