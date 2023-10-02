@@ -35,12 +35,9 @@
                         frameborder="0" 
                         allowfullscreen="true" 
                         allowtransparency="true"
-						crossorigin="anonymous"
-						sandbox="allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
 						id="techvill-widget-iframe"
 						onload="window.parent.postMessage('techvill-widget-iframe-loaded', '*')"
 						name="techvill-widget-iframe"
-						lazyload="true"
                     ></iframe>`
 						: `<div class="techvill-widget-notfound-iframe">
                         <h1>Chat widget</h1>
