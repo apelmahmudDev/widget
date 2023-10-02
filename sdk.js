@@ -36,8 +36,11 @@
                         allowfullscreen="true" 
                         allowtransparency="true"
 						crossorigin="anonymous"
-						sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-top-navigation-by-user-activation allow-downloads allow-presentation allow-orientation-lock allow-pointer-lock allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-						seamless
+						sandbox="allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+						id="techvill-widget-iframe"
+						onload="window.parent.postMessage('techvill-widget-iframe-loaded', '*')"
+						name="techvill-widget-iframe"
+						lazyload="true"
                     ></iframe>`
 						: `<div class="techvill-widget-notfound-iframe">
                         <h1>Chat widget</h1>
