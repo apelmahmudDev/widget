@@ -2,10 +2,10 @@
 (function () {
 	// Get customization options from data attributes
 	const scriptTag = document.currentScript;
-	const fabBgColor = scriptTag.getAttribute("data-fab-bg-color") || "#333333";
+	const fabBgColor = scriptTag.getAttribute("data-fab-bg-color") || "#24E186CC";
 	// const fabIcon = scriptTag.getAttribute("data-fab-icon");
-	const fabIcon = "/assets/robot-face.svg";
-	const fabCloseIcon = scriptTag.getAttribute("data-fab-close-icon");
+	const fabIcon = "https://i.ibb.co/CthkwCV/img-robot-face.png";
+	const fabCloseIcon = "https://i.ibb.co/CthkwCV/img-robot-face.png";
 	const iframeSrc = scriptTag.getAttribute("data-iframe-src") || "";
 	const iframeWidth = scriptTag.getAttribute("data-iframe-width") || 320;
 	const iframeHeight = scriptTag.getAttribute("data-iframe-height") || 532;
@@ -60,15 +60,15 @@
         .techvill-widget-fab-container {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            right: 21px;
             z-index: 1000;
         }
         .techvill-widget-fab-button {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             color: #fff;
             border: none;
@@ -76,14 +76,14 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         }
         .techvill-widget-fab-icon {
-            height: 35px;
-            width: 35px;
+            height: 47px;
+            width: 47px;
         }
         .techvill-widget-chat-modal {
             display: none;
             position: fixed;
-            bottom: 90px;
-            right: 15px;
+            bottom: 110px;
+            right: 21px;
             background-color: #fff;
             z-index: 1000;
             border-radius: 10px;
@@ -118,6 +118,7 @@
 	fabImg.className = "techvill-widget-fab-icon";
 	fabImg.id = "techvill-widget-icon";
 	fabImg.src = fabIcon;
+	fabImg.style.objectFit = "contain";
 	fabImg.alt = "open";
 	fabButton.appendChild(fabImg);
 
