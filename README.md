@@ -67,7 +67,7 @@ To integrate the chatbot widget into your web application, copy and paste the sc
         ></script>
 
         <!-- Other content -->
-        ```
 
-</body>
-</html>
+    </body>
+    </html>
+    ```
