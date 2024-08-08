@@ -4,7 +4,7 @@
 	// Get customization options from data attributes
 	const config = {
 		fabBgColor: scriptTag.getAttribute("data-fab-bg-color") || "#9163DD",
-		fabIcon: scriptTag.getAttribute("data-fab-icon") || "https://cdn-icons-png.flaticon.com/128/6819/6819644.png",
+		fabIcon: scriptTag.getAttribute("data-fab-icon") || "https://i.ibb.co/CthkwCV/img-robot-face.png",
 		iframeSrc: scriptTag.getAttribute("data-iframe-src") || "",
 		iframeWidth: scriptTag.getAttribute("data-iframe-width") || 375,
 		iframeHeight: scriptTag.getAttribute("data-iframe-height") || 532,
