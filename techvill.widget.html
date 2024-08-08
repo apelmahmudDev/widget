@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Widget</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Embed your website</h1>
+			<p class="instruction">Click on the FAB icon to open your website in the Widget iframe.</p>
+			<h3>Install Widget</h3>
+			<p>
+				To install widget, you can place this code before the &lt;body/&gt tag
+				on every page of your website.
+			</p>
+			<div class="code-area">
+				<code>
+					&lt;script
+					<br />
+					<span class="code">src="https://techvill-chatwidget.netlify.app/chatbot-sdk.js"</span
+					><br />
+					<span class="code">data-iframe-src="https://chatbot-free.vercel.app/artifism/client-chatbot"</span
+					><br />
+					<span class="code">data-iframe-height="632"</span><br />
+					<span class="code">data-iframe-width="390"</span><br />
+					&gt;<br />&lt;/script&gt;
+				</code>
+			</div>
+		</div>
+		<script
+			src="./js/techvill.widget.js"
+			data-fab-icon="./assets/robot-face.svg"
+			data-iframe-src="http://localhost:5173/chatbot/embed/chatbot_code=075a9bfe47e6413/welcome"
+			data-iframe-height="532"
+			data-iframe-width="400"
+		></script>
+	</body>
+</html>
