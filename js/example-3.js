@@ -42,6 +42,7 @@
                             id="techvill-widget-iframe"
                             onload="window.parent.postMessage('techvill-widget-iframe-loaded', '*')"
                             name="techvill-widget-iframe"
+                            crossOrigin="anonymous"
                         ></iframe>`
                         : `<div class="techvill-widget-notfound-iframe">
                             <h1>Chat widget</h1>
