@@ -20,6 +20,7 @@
                 const data = await response.json();
                 const chatbot = data?.data || {};
                 config.fabBgColor = chatbot?.meta?.theme_color || config.fabBgColor;
+                
                 return chatbot;
             } catch (error) {
                 console.error("Failed to fetch chatbot details:", error);
