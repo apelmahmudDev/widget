@@ -20,7 +20,7 @@
                 const data = await response.json();
                 const chatbot = data?.data || {};
                 config.fabBgColor = chatbot?.meta?.theme_color || config.fabBgColor;
-                
+                config.fabIcon = chatbot?.meta?.floating_image?.url || config.fabIcon;
                 return chatbot;
             } catch (error) {
                 console.error("Failed to fetch chatbot details:", error);
@@ -84,6 +84,8 @@
             z-index: 1500;
         }
         .techvill-widget-fab-button {
+            position: relative;
+            flex-shrink: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -97,8 +99,9 @@
             transition: all 0.1s ease-in-out;
         }
         .techvill-widget-fab-icon {
-            height: 50px;
-            width: 50px;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
             object-fit: contain;
         }
         .techvill-widget-chat-modal {
